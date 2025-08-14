@@ -4,3 +4,9 @@ div button{
 div {
     height: 1.2em;
 }
+canvas{
+    position: absolute;
+
+    border:1px solid black;
+    margin-top: 12em;
+}

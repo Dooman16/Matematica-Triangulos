@@ -6,12 +6,20 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div> triangulos en una matriz de nxn
-  <input type="text" [(ngModel)]="n" placeholder="valor de n">
-  <button (click)="ejecutar()"></button>
+<div> triangulos en una matriz de nxn :
+  <input type="text" [(ngModel)]="n" placeholder="valor de n">  <button (click)="ejecutar()"></button>
+  <p>alto y ancho grilla : <input type="text" [(ngModel)]="canvasHeightInput" placeholder="tamaño">   <input type="text" [(ngModel)]="canvasWidthInput" placeholder="tamaño"></p>
+  <p>velocidad(triangulos por segundo) : <input type="text" [(ngModel)]="speed" placeholder="speed">(la velocidad puede variar)</p>
   <p>existen {{cantTriangulos}} triangulos!</p>
-  <p>tipo de triangulos: triangulo {{tipo1}} {{tipo2}}</p>
+  <p>tipo de triangulos: triangulo {{tipo1}} {{tipo2}}. ----- Cantidades por tipo de triangulo I: {{cantPorTipo[0]}},
+     E: {{cantPorTipo[1]}}, A: {{cantPorTipo[2]}}, R: {{cantPorTipo[3]}}, O: {{cantPorTipo[4]}}, 
+    IA: {{cantPorTipo[5]}}, IR: {{cantPorTipo[6]}}, IO: {{cantPorTipo[7]}}, EA: {{cantPorTipo[8]}},
+     ER: {{cantPorTipo[9]}}, EO: {{cantPorTipo[10]}}
+  </p> 
 </div>
+  <canvas #canvasPuntos width={{canvasWidth}} height={{canvasHeight}}></canvas>
+  <canvas #canvasTriangulo width={{canvasWidth}} height={{canvasHeight}}></canvas>
+
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
